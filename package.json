@@ -1,0 +1,21 @@
+{
+	"name": "cineminhavini",
+	"version": "1.0.0",
+	"description": "stream something",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "viniceosm",
+	"license": "ISC",
+	"dependencies": {
+		"bootstrap": "^4.4.1",
+		"cookie-parser": "^1.4.5",
+		"ejs": "^3.0.2",
+		"express": "*",
+		"express-session": "^1.17.0",
+		"jquery": "^3.5.0",
+		"socket.io": "*",
+		"socket.io-stream": "^0.9.1"
+	}
+}

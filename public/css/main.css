@@ -1,0 +1,40 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: black;
+	margin: 0px;
+	padding: 5px;
+}
+
+hr {
+	border-top: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+#videoElement {
+	background-color: rgb(65, 65, 65);
+	width: 100%;
+	height: auto;
+}
+
+#listaUsuarios {
+	color: white;
+}
+
+#listaUsuarios > li:hover {
+	color: red;
+	cursor: pointer;
+}
+
+#areaEscolherTela {
+	display: none;
+}
+
+@media only screen and (min-width: 768px) {
+	/* For desktop: */
+	#videoElement {
+		height: 500px;
+		width: auto;
+	}
+}
