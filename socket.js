@@ -23,7 +23,9 @@ module.exports = function (_io, _ss) {
 
 			io.sockets.emit('atualiza lista usuarios', usuarios);
 
-			socket.to(broadcaster).emit("disconnectPeer", socket.id);
+			if (getSocket(broadcaster)) {
+				getSocket(broadcaster).emit("disconnectPeer", socket.id);
+			}
 		});
 
 		socket.on('novo usuario', function(nomeUsuario){
@@ -40,6 +42,16 @@ module.exports = function (_io, _ss) {
 			let controlando = usuarios.length == 1;
 
 			socket.emit('novo usuario', controlando);
+
+			if (controlando == false) {
+				// é watcher
+				if (getSocket(broadcaster)) {
+					getSocket(broadcaster).emit("watcher", socket.id);
+				} else {
+					console.log('1- n acho id', broadcaster);
+				}
+			}
+
 			io.emit('atualiza lista usuarios', usuarios);
 		});
 

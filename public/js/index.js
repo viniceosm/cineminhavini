@@ -26,6 +26,7 @@ window.onload = function() {
 
 		document.getElementById('txtNomeUsuario').value = '';
 		document.getElementById('formUsuario').style.display = 'none';
+		document.getElementById('areaSalaVideo').style.display = 'block';
 	};
 
 	socket.on('novo usuario', function(controlando) {
@@ -42,7 +43,7 @@ window.onload = function() {
 		html = '';
 
 		for (const usuario of usuarios) {
-			html += `<li onclick="callUser(${usuario.id})">${usuario.nome}</li>`;
+			html += `<li>${usuario.nome}</li>`;
 		}
 
 		document.getElementById('listaUsuarios').innerHTML = html;

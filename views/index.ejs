@@ -10,7 +10,7 @@
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap" rel="stylesheet">
 
 	<script src="socket.io/socket.io.js"></script>
 	<script src="js/socket.io-stream.js"></script>
@@ -22,26 +22,30 @@
 </head>
 
 <body>
-	<form id="formUsuario" action="">
-		<input type="text" name="txtNomeUsuario" id="txtNomeUsuario" placeholder="Nome de usuário">
-	</form>
-
-
-	<div id="areaEscolherTela">
-		<hr />
-		<button id="videoSelectBtn" class="button is-text">
-			Escolher tela
-		</button>
+	<div id="header">
+		Cineminha
 	</div>
 
-	<hr />
+	<div id="content">
+		<form id="formUsuario" action="">
+			Qual o seu nome?<br>
+			<input type="text" autocomplete="off" name="txtNomeUsuario" id="txtNomeUsuario" placeholder="Nome de usuário">
+		</form>
 
-	<video id="videoElement"></video>
+		<div id="areaSalaVideo">
+			<div id="videoLista">
+				<video id="videoElement"></video>
+				<ul id="listaUsuarios"></ul>
+			</div>
+		</div>
 
-	<hr />
+		<div id="areaEscolherTela">
+			<button id="videoSelectBtn" class="button is-text">
+				Escolher tela
+			</button>
+		</div>
+	</div>
 
-	<ul id="listaUsuarios">
-	</ul>
 
 	<script src="js/index.js" controls></script>
 </body>
