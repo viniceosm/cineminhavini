@@ -95,14 +95,20 @@ window.onload = function() {
 		// Create a desktopStream
 		desktopStream = await navigator.mediaDevices.getDisplayMedia(constraints);
 
+		let tracks;
+
 		if (mic === true) {
 			voiceStream = await navigator.mediaDevices.getUserMedia({ video: false, audio: mic });
-		}
 
-		let tracks = [
-			...desktopStream.getVideoTracks(),
-			...mergeAudioStreams(desktopStream, voiceStream)
-		];
+			tracks = [
+				...desktopStream.getVideoTracks(),
+				...mergeAudioStreams(desktopStream, voiceStream)
+			];
+		} else {
+			tracks = [
+				...desktopStream.getVideoTracks()
+			];
+		}
 
 		stream = new MediaStream(tracks);
 
