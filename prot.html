@@ -1,0 +1,145 @@
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap" rel="stylesheet">
+	</head>
+
+<style>
+	body {
+		margin: 0;
+		box-sizing: border-box;
+		font-family: 'Open Sans', sans-serif;
+	}
+	#main {
+		/* display: flex; */
+		/* flex-direction: column; */
+		width: 100%;
+		height: 100%;
+	}
+	#area-video {
+		background-color:purple;
+		/* flex: 3; */
+		height: 200px;
+		width: 100%;
+		position: fixed;
+		top: 0;
+	}
+	#area-direita {
+		margin-top: 200px; /* px do area-video height */
+		background-color: rgb(38, 162, 167);
+		/* flex: 3; */
+		/* flex-direction: column; */
+	}
+	#area-botao {
+		background-color: brown;
+		/* flex: 1; */
+		height: 50px;
+		width: 100%;
+	}
+	#area-chat {
+		background-color:green;
+		padding: 5px;
+		flex: 7;
+		overflow: auto;
+	}
+	.balao-chat {
+		background-color: chartreuse;
+		padding: 5px;
+		margin: 5px;
+		width: auto;
+		border-radius: 0px 5px 5px 0px;
+	}
+	.balao-chat > div:first-child {
+		margin-bottom: 5px;
+	}
+
+	/* scrollbar */
+	::-webkit-scrollbar-thumb{
+		background-color: rgba(0,0,0,0.3);
+	}
+	::-webkit-scrollbar{
+		width: 8px;
+		height: 6px;
+	}
+
+	@media only screen and (min-width: 768px) {
+		/* For desktop: */
+		#main {
+			display: flex;
+		}
+		#area-video {
+			height: 100%;
+			flex: 4;
+			position: initial;
+		}
+		#area-direita {
+			margin-top: 0px;
+			flex: 2;
+
+			flex-direction: column;
+			display: flex;
+		}
+		.balao-chat {
+			width: fit-content;
+		}
+	}
+</style>
+
+<body>
+	<div id="main">
+		<div id="area-video">
+		</div>
+
+		<div id="area-direita">
+			<div id="area-botao"></div>
+			<div id="area-chat">
+				<div class="balao-chat">
+					<div>maria</div>
+					<div>oi sou a maria sua amiga</div>
+				</div>
+				<div class="balao-chat">
+					<div>amanda</div>
+					<span>oi tudo bem amiga bem vinda mostra seus gatos ai por favor obg</span>
+				</div>
+				<div class="balao-chat">
+					<div>vinivini</div>
+					<span>🤡ÅŤÅQŮĘ ĐØ§ PÅĽHÅÇØ§ ĽØĶØ🤡
+						AGORA É NOIS QUE MANDA NESSA PORRA ☣☣☣👿
+						🤡SAIAM DO GRUPO 🤡 COMEÇOU O ATAQUE 🤡🤡🤡 HÁ! HÁ! HÁ! HÁ! HÁ! 🤡🤡🤡🤡🤡🤡
+						VØÇË§ FØŘÅM ÅŤÅČÅĐØ§ PËĽØ§ PÅĽHÅÇØ§ ĽØĶØ§ Ø§ ČØMËĐØŘË§ ĐË ÄĐMÎÑÎ§ŤŘÅĐØ 🤡🤡🤡🤡🤡🤡🤡🤡🤡🤡🤡🤡🤡🤡🤡🤡🤡🤡🤡 🤡🤡🤡🤡🤡🤡
+						̿̿ ̿̿ ̿̿ ̿'̿'\̵͇̿̿\з= 🤡 =ε/̵͇̿̿/’̿’̿ ̿ ̿̿ ̿̿ ̿̿
+						( . ) _// 🍆 \\_
+						🤡PÅĽHÅÇØ§ ĽØĶØ🤡
+						Ta-Em-CHoK kk❓⚡</span>
+				</div>
+				<div class="balao-chat">
+					<div>vinivini</div>
+					<span>Olha que coisa mais linda<br>
+						Mais cheia de graça<br>
+						É ela, menina<br>
+						Que vem e que passa<br>
+						Num doce balanço<br>
+						A caminho do mar<br><br>
+
+						Moça do corpo dourado<br>
+						Do sol de Ipanema<br>
+						O seu balançado é mais que um poema<br>
+						É a coisa mais linda que eu já vi passar<br>
+
+						Ah, por que estou tão sozinho?<br>
+						Ah, por que tudo é tão triste?<br>
+						Ah, a beleza que existe<br>
+						A beleza que não é só minha<br>
+						Que também passa sozinha<br>
+
+						Ah, se ela soubesse<br>
+						Que quando ela passa<br>
+						O mundo inteirinho se enche de graça<br>
+						E fica mais lindo<br>
+						Por causa do amor</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

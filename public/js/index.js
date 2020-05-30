@@ -25,13 +25,19 @@ window.onload = function() {
 		socket.emit('novo usuario', nomeUsuario);
 
 		document.getElementById('txtNomeUsuario').value = '';
+
 		document.getElementById('formUsuario').style.display = 'none';
-		document.getElementById('areaSalaVideo').style.display = 'block';
+
+		// document.getElementById('area-video').style.display = 'block';
+		// document.getElementById('area-direita').style.display = 'flex';
+		// document.getElementById('area-botao').style.display = 'block';
+		// document.getElementById('area-chat').style.display = 'block';
+		document.getElementById('home').style.display = 'flex';
 	};
 
 	socket.on('novo usuario', function(controlando) {
 		if (controlando === true) {
-			document.getElementById('areaEscolherTela').style.display = 'block';
+			document.getElementById('videoSelectBtn').style.display = 'block';
 
 			isBroadcaster = true;
 		}
@@ -52,7 +58,7 @@ window.onload = function() {
 	document.getElementById('videoSelectBtn').onclick = selectSource;
 
 	// inclui mic
-	var mic = true;
+	var mic = false;
 
 	const mergeAudioStreams = (desktopStream, voiceStream) => {
 		const context = new AudioContext();

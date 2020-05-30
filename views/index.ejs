@@ -22,9 +22,9 @@
 </head>
 
 <body>
-	<div id="header">
+	<!-- <div id="header">
 		Cineminha
-	</div>
+	</div> -->
 
 	<div id="content">
 		<form id="formUsuario" action="">
@@ -32,17 +32,23 @@
 			<input type="text" autocomplete="off" name="txtNomeUsuario" id="txtNomeUsuario" placeholder="Nome de usuário">
 		</form>
 
-		<div id="areaSalaVideo">
-			<div id="videoLista">
+		<div id="home">
+			<div id="area-video">
 				<video id="videoElement"></video>
-				<ul id="listaUsuarios"></ul>
 			</div>
-		</div>
 
-		<div id="areaEscolherTela">
-			<button id="videoSelectBtn" class="button is-text">
-				Escolher tela
-			</button>
+			<div id="area-direita">
+				<div id="area-botao">
+					<div id="areaEscolherTela">
+						<button id="videoSelectBtn" class="button is-text">
+							Escolher tela
+						</button>
+					</div>
+				</div>
+				<div id="area-chat">
+					<ul id="listaUsuarios"></ul>
+				</div>
+			</div>
 		</div>
 	</div>
 

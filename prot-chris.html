@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste</title>
+
+  <style>
+    body { 
+      margin: 0;
+      min-height: 100vh;
+    }
+
+    .container {
+      justify-content: stretch;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .video {
+      display: flex;
+      flex: 4;
+      justify-content: center;
+      align-items: center;
+      background: red;
+      min-height: 100vh;
+    }
+
+    .actions {
+      flex: 2;
+      flex-direction: column;
+      background-color: green;  
+    }
+
+    .btn {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      background: brown;
+    }
+
+    .chat {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <div class="video"> 
+        <h1>VIDEO</h1>
+      </div>
+      <div class="actions">
+        <div class="btn">
+          <h1>BOTÃO COMPARTILHAR TELA</h1> 
+        </div>
+        <div class="chat">
+          <h1>CHAT</h1> 
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
