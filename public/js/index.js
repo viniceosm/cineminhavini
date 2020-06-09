@@ -105,7 +105,7 @@ window.onload = function() {
 				...mergeAudioStreams(desktopStream, voiceStream)
 			];
 		} else {
-			tracks = desktopStream.getVideoTracks()
+			tracks = desktopStream;
 		}
 
 		stream = new MediaStream(tracks);
