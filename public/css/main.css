@@ -99,11 +99,6 @@ hr {
 		margin: 0 auto;
 		align-items: center;
 	}
-	#listaUsuarios {
-		width: 30%;
-		height: 500px;
-	}
-
 	#area-video {
 		height: 100%;
 		flex: 4;
