@@ -89,7 +89,13 @@ window.onload = function() {
 	async function selectSource(source) {
 		let constraints = {
 			audio: true,
-			video: { mediaSource: "screen" }
+			video: {
+				mediaSource: "screen",
+				maxWidth: screen.width,
+				maxHeight: screen.height,
+				minFrameRate: 1,
+				maxFrameRate: 30
+			}
 		};
 
 		// Create a desktopStream
