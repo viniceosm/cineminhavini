@@ -14,7 +14,7 @@ module.exports = function (_io, _ss) {
 
 
 		socket.on('disconnect', function(){
-			usuarios.splice(usuarios.map((e) => { return e.nome; }).indexOf(socket.nome), 1);
+			usuarios.splice(usuarios.map((e) => { return e.id; }).indexOf(socket.id), 1);
 
 			connections.splice(connections.map((e) => { return e.id; }).indexOf(socket.id), 1);
 			// connections.splice(connections.indexOf(socket), 1);
